@@ -1,10 +1,11 @@
 
+
 body{
     margin: 0;
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
+    
 }
-
 
 .logo-picture {
 
@@ -49,6 +50,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 40px 0;
+    background-color: #F2F4F4 ;
 }
 
 .topic h1, .topic p{
@@ -67,18 +69,55 @@ body{
     color:#555555;
 }
 
-.btn{
+.btn-discover{
 
     margin-top: 25px;
+    height: 42px;
+    border-radius: 20px;
+    background: linear-gradient(#FF79DA ,#9356DC );
+    box-shadow: #9356DC 0px 2px 3px;
+    border:none;
+    color: white;
+    padding: 0 25px;
+    
 }
 
-.btn-discover{
-    font-size: 16px;
-    height: 50px;
-    border-radius: 25px;
-    background-color:#E166E7;
-    border:0px;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background-color:white;
+    height: 100vh;
+    animation: disappear 0s forwards;
+    animation-delay: 3s;
+    
+  }
+  
+  .loading-spinner{
+    
+    border-bottom:2px solid #9356DC;
+    border-left: 2px solid #9356DC;
+    border-top: 2px solid #FF79DA;
+    border-right: 2px solid #FF79DA;
+    border-radius: 50%;
+    background: linear-gradient(#FF79DA ,#9356DC);
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear infinite;
+    
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes disappear{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+  
+
