@@ -123,26 +123,101 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  list-style: none;
+  list-style: decimal;
+  gap: 25px;
   margin: 0;
   padding: 0;
+  color: black;
+}
+
+.hovering {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  left: 12px;
+  width: 100%;
+  height: 65px;
+  border-radius: 20px;
+  background-color: #f2f4f4;
+  box-shadow: #e7e7e7 0px 2px 3px;
+  text-decoration: none;
+  color: black;
+}
+.hovering:hover {
+  background-color: #f5eaf9;
+}
+.hovering:hover i {
+  color: #9356dc;
 }
 
 li {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  height: 65px;
-  border-radius: 20px;
-  background-color: #F2F4F4;
-  box-shadow: #E7E7E7 0px 2px 3px;
+  gap: 12px;
 }
 
 .fa-solid {
-  font-size: 25px;
+  font-size: 20px;
+  color: gray;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -12px;
+  background-color: #9356dc;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.restaurant {
+  padding: 25px 15px;
+  margin-top: 50px;
+  background-color: #f2f4f4;
+}
+.restaurant h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.restaurant h3, .restaurant p {
+  margin: 0;
+}
+
+.thumbnail-restaurant {
+  min-width: 200px;
+  min-height: 210px;
+  width: 100%;
+  height: 190px;
+  background-color: white;
+  box-shadow: 2px 2px 5px #d7d7d7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.restaurant-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 35px;
+}
+
+.thumbnail-restaurant .picture {
+  width: 100%;
+  height: 70%;
+}
+
+.thumbnail-restaurant .picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,59 +1,52 @@
-
-
-body{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'roboto', sans-serif;
-    
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
 }
 
 .logo-picture {
-
-    display: flex;
-    justify-content: center;
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
 }
 
-.logo-picture img{
-
+  img {
     width: 200px;
+  }
 }
 
-.location{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    height: 50px;
-    background-color: #E7E7E7;
-    box-shadow: 0 -5px 6px -5px gray;
-    font-size: 18px;
-    font-weight: bold;
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  height: 50px;
+  background-color: #e7e7e7;
+  box-shadow: 0 -5px 6px -5px gray;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.location p{
-
+  p {
     color: #555555;
+  }
 }
 
 .map-icon i {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-.topic{
+.topic {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  background-color: #f2f4f4;
 
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0;
-    background-color: #F2F4F4 ;
-}
-
-.topic h1, .topic p{
+  h1 {
     margin: auto;
     text-align: center;
 }
@@ -61,12 +54,13 @@ body{
 .topic h1{
 
     font-size: 25px;
-}
+  }
 
-.topic p{
-
+  p {
+    @extend h1;
     font-size: 18px;
-    color:#555555;
+    color: #555555;
+  }
 }
 
 .btn-discover {
@@ -191,3 +185,58 @@ li {
   height: 30px;
   border-radius: 20px;
 }
+
+.restaurant {
+  padding: 25px 15px;
+  margin-top: 50px;
+  background-color: #f2f4f4;
+
+
+  h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  h3,p{
+
+    margin: 0;
+  }
+}
+
+
+.thumbnail-restaurant {
+  min-width: 200px;
+  min-height: 210px;
+  width: 100%;
+  height: 190px;
+  background-color: white;
+  box-shadow: 2px 2px 5px #d7d7d7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.restaurant-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 35px;
+ 
+}
+
+.thumbnail-restaurant .picture {
+  width: 100%;
+  height: 70%;
+  
+}
+
+.thumbnail-restaurant .picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
