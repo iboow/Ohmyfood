@@ -8,7 +8,6 @@ body {
   display: flex;
   justify-content: center;
   padding: 15px;
-}
 
   img {
     width: 200px;
@@ -26,7 +25,6 @@ body {
   box-shadow: 0 -5px 6px -5px gray;
   font-size: 18px;
   font-weight: bold;
-}
 
   p {
     color: #555555;
@@ -49,10 +47,6 @@ body {
   h1 {
     margin: auto;
     text-align: center;
-}
-
-.topic h1{
-
     font-size: 25px;
   }
 
@@ -73,7 +67,6 @@ body {
   color: white;
   font-weight: bold;
   padding: 0 25px;
-    
 }
 
 .loader-container {
@@ -87,7 +80,6 @@ body {
   height: 100vh;
   animation: disappear 0s forwards;
   animation-delay: 3s;
-    
 }
 
 .loading-spinner {
@@ -100,7 +92,6 @@ body {
   width: 100px;
   height: 100px;
   animation: spin 3s linear infinite;
-    
 }
 
 @keyframes spin {
@@ -129,7 +120,6 @@ body {
 .functionning ul {
   display: flex;
   flex-direction: column;
-    justify-content: center;
   align-items: center;
   list-style: decimal;
   gap: 25px;
@@ -214,7 +204,14 @@ body {
   box-shadow: 2px 2px 5px #d7d7d7;
   border-radius: 20px;
   overflow: hidden;
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }
+
+
 
 .restaurant-group {
   display: flex;
@@ -322,6 +319,11 @@ footer{
 
 }
 
+
+
+   
+
+ 
 
 
 
