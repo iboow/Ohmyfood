@@ -115,6 +115,10 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 20px;
+
+  a{
+    gap: 15px;
+  }
 }
 
 .functionning ul {
@@ -155,6 +159,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
+  width: 100%;
   gap: 12px;
 }
 

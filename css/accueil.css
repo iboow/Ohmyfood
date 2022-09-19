@@ -111,6 +111,9 @@ body {
   justify-content: center;
   margin: 20px;
 }
+.functionning a {
+  gap: 15px;
+}
 
 .functionning ul {
   display: flex;
@@ -148,6 +151,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
+  width: 100%;
   gap: 12px;
 }
 
