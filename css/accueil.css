@@ -201,16 +201,6 @@ body {
   text-decoration: none;
   color: black;
 }
-
-.restaurant-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: 30px;
-  column-gap: 35px;
-}
-
 .thumbnail-restaurant .picture {
   width: 100%;
   height: 70%;
@@ -219,6 +209,15 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.restaurant-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 35px;
 }
 
 .new {
@@ -258,9 +257,32 @@ body {
 }
 
 .heart {
+  display: flex;
   font-size: 28px;
 }
+.heart .fa-regular {
+  position: relative;
+}
+.heart .fa-solid {
+  position: absolute;
+  opacity: 0;
+}
+.heart .fa-solid:hover {
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: fill 2.5s forwards;
+}
 
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
