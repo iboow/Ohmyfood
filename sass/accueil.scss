@@ -62,11 +62,16 @@ body {
   height: 42px;
   border-radius: 20px;
   background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: #9356dc 0px 2px 3px;
+  box-shadow: rgb(175, 165, 165) 0px 2px 3px;
   border: none;
   color: white;
   font-weight: bold;
   padding: 0 25px;
+
+  &:hover{
+    filter: brightness(1.1);
+    box-shadow: rgb(175, 165, 165) 0px 6px 10px;
+  }
 }
 
 .loader-container {

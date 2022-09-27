@@ -46,12 +46,11 @@ header {
 
 .title {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  gap: 80px;
 
   h1 {
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Shrikhand", sans-serif;
   }
 
@@ -71,15 +70,22 @@ header {
     height: 42px;
     border-radius: 20px;
     background: linear-gradient(#ff79da, #9356dc);
-    box-shadow: #9356dc 0px 2px 3px;
+    box-shadow: rgb(175, 165, 165) 0px 2px 3px;
     border: none;
     color: white;
     font-weight: bold;
     padding: 0 40px;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: rgb(175, 165, 165) 0px 6px 10px;
+    }
   }
 }
 
-.starter-dishes-dessert {
+.starter,
+.dishes,
+.dessert {
   display: flex;
   flex-direction: column;
 
@@ -93,18 +99,9 @@ header {
     background-color: white;
     margin-top: 5px;
     margin-bottom: 10px;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: apparition 1s ease-out forwards;
 
-    &:nth-child(0) {
-      animation: apparition 1s 0.4s ease-out forwards;
-    }
-    &:nth-child(1) {
-      animation: apparition 1s 0.6s ease-out forwards;
-    }
-    &:nth-child(2) {
-      animation: apparition 1s 0.8s ease-out forwards;
+    &:hover>.selection{
+      opacity: 1;
     }
 
     .food {
@@ -118,74 +115,143 @@ header {
         margin: 0;
       }
     }
-
     .price {
       align-self: end;
       margin-right: 15px;
       font-weight: bold;
     }
   }
-}
 
-.name {
-  height: 70px;
+  .selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 5%;
+    height: 75px;
+    background-color: #99e2d0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    opacity: 0;
 
-  p {
-    font-size: 18px;
-    width: 50px;
-    height: 50px;
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 15px;
-      height: 1px;
-      width: 100%;
-      border-bottom: 4px solid #99e2d0;
-      margin: 0;
+    .fa-check {
+      font-size: 20px;
+      background-color: white;
+      border-radius: 50%;
+      color: #99e2d0;
+      padding: 3px;
     }
   }
 }
 
-@keyframes apparition {
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
+  .starter .plate {
+    opacity: 0;
+    transform: translateY(30px);
 
-footer {
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  color: white;
-  background-color: #3d3939;
-
-  h3 {
-    font-family: "Shrikhand", sans-serif;
-    margin: 0;
+    &:nth-child(2) {
+      animation: apparition 1s 0.4s ease-out forwards;
+    }
+    &:nth-child(3) {
+      animation: apparition 1s 0.6s ease-out forwards;
+    }
+    &:nth-child(4) {
+      animation: apparition 1s 0.8s ease-out forwards;
+    }
   }
 
-  ul {
+  .dishes .plate {
+    opacity: 0;
+    transform: translateY(30px);
+
+    &:nth-child(2) {
+      animation: apparition 1s 1.2s ease-out forwards;
+    }
+    &:nth-child(3) {
+      animation: apparition 1s 1.4s ease-out forwards;
+    }
+    &:nth-child(4) {
+      animation: apparition 1s 1.6s ease-out forwards;
+    }
+  }
+
+  .dessert .plate {
+    opacity: 0;
+    transform: translateY(30px);
+
+    &:nth-child(2) {
+      animation: apparition 1s 2s ease-out forwards;
+    }
+    &:nth-child(3) {
+      animation: apparition 1s 2.2s ease-out forwards;
+    }
+    &:nth-child(4) {
+      animation: apparition 1s 2.4s ease-out forwards;
+    }
+  }
+
+  .name {
+    height: 70px;
+
+    p {
+      font-size: 18px;
+      width: 50px;
+      height: 50px;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        height: 1px;
+        width: 100%;
+        border-bottom: 4px solid #99e2d0;
+        margin: 0;
+      }
+    }
+  }
+
+  @keyframes apparition {
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+ 
+
+  footer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-family: "roboto", sans-serif;
-    padding: 0;
+    padding: 15px;
+    color: white;
+    background-color: #3d3939;
 
-    li {
-      display: flex;
-      height: 25px;
-      gap: 5px;
+    h3 {
+      font-family: "Shrikhand", sans-serif;
+      margin: 0;
     }
 
-    .icon {
+    ul {
       display: flex;
-      align-items: center;
-      color: white;
+      flex-direction: column;
       gap: 10px;
+      font-family: "roboto", sans-serif;
+      padding: 0;
+
+      li {
+        display: flex;
+        height: 25px;
+        gap: 5px;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
     }
   }
-}
+

@@ -46,12 +46,11 @@ header {
 
 .title {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  gap: 80px;
 }
 .title h1 {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Shrikhand", sans-serif;
 }
 .title .fa-heart {
@@ -69,18 +68,26 @@ header {
   height: 42px;
   border-radius: 20px;
   background: linear-gradient(#ff79da, #9356dc);
-  box-shadow: #9356dc 0px 2px 3px;
+  box-shadow: rgb(175, 165, 165) 0px 2px 3px;
   border: none;
   color: white;
   font-weight: bold;
   padding: 0 40px;
 }
+.order .btn-order:hover {
+  filter: brightness(1.1);
+  box-shadow: rgb(175, 165, 165) 0px 6px 10px;
+}
 
-.starter-dishes-dessert {
+.starter,
+.dishes,
+.dessert {
   display: flex;
   flex-direction: column;
 }
-.starter-dishes-dessert .plate {
+.starter .plate,
+.dishes .plate,
+.dessert .plate {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,33 +97,100 @@ header {
   background-color: white;
   margin-top: 5px;
   margin-bottom: 10px;
-  opacity: 0;
-  transform: translateY(50px);
-  animation: apparition 1s ease-out forwards;
 }
-.starter-dishes-dessert .plate:nth-child(0) {
-  animation: apparition 1s 0.4s ease-out forwards;
+.starter .plate:hover > .selection,
+.dishes .plate:hover > .selection,
+.dessert .plate:hover > .selection {
+  opacity: 1;
 }
-.starter-dishes-dessert .plate:nth-child(1) {
-  animation: apparition 1s 0.6s ease-out forwards;
-}
-.starter-dishes-dessert .plate:nth-child(2) {
-  animation: apparition 1s 0.8s ease-out forwards;
-}
-.starter-dishes-dessert .plate .food {
+.starter .plate .food,
+.dishes .plate .food,
+.dessert .plate .food {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-left: 15px;
 }
-.starter-dishes-dessert .plate .food h3,
-.starter-dishes-dessert .plate .food p {
+.starter .plate .food h3,
+.starter .plate .food p,
+.dishes .plate .food h3,
+.dishes .plate .food p,
+.dessert .plate .food h3,
+.dessert .plate .food p {
   margin: 0;
 }
-.starter-dishes-dessert .plate .price {
+.starter .plate .price,
+.dishes .plate .price,
+.dessert .plate .price {
   align-self: end;
   margin-right: 15px;
   font-weight: bold;
+}
+.starter .selection,
+.dishes .selection,
+.dessert .selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  width: 5%;
+  height: 75px;
+  background-color: #99e2d0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  opacity: 0;
+}
+.starter .selection .fa-check,
+.dishes .selection .fa-check,
+.dessert .selection .fa-check {
+  font-size: 20px;
+  background-color: white;
+  border-radius: 50%;
+  color: #99e2d0;
+  padding: 3px;
+}
+
+.starter .plate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.starter .plate:nth-child(2) {
+  animation: apparition 1s 0.4s ease-out forwards;
+}
+.starter .plate:nth-child(3) {
+  animation: apparition 1s 0.6s ease-out forwards;
+}
+.starter .plate:nth-child(4) {
+  animation: apparition 1s 0.8s ease-out forwards;
+}
+
+.dishes .plate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.dishes .plate:nth-child(2) {
+  animation: apparition 1s 1.2s ease-out forwards;
+}
+.dishes .plate:nth-child(3) {
+  animation: apparition 1s 1.4s ease-out forwards;
+}
+.dishes .plate:nth-child(4) {
+  animation: apparition 1s 1.6s ease-out forwards;
+}
+
+.dessert .plate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.dessert .plate:nth-child(2) {
+  animation: apparition 1s 2s ease-out forwards;
+}
+.dessert .plate:nth-child(3) {
+  animation: apparition 1s 2.2s ease-out forwards;
+}
+.dessert .plate:nth-child(4) {
+  animation: apparition 1s 2.4s ease-out forwards;
 }
 
 .name {
