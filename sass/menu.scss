@@ -97,22 +97,38 @@ header {
     height: 75px;
     border-radius: 1rem;
     background-color: white;
+    overflow: hidden;
     margin-top: 5px;
     margin-bottom: 10px;
 
     &:hover>.selection{
       opacity: 1;
+      animation: slide 1.2s forwards;
+    }
+
+    &:hover>.price{
+      animation: shift 1.2s forwards;
+    }
+
+    &:hover>.food{
+
+      animation: test 1s forwards;
     }
 
     .food {
       display: flex;
       flex-direction: column;
+      width: 280px;
       gap: 10px;
       margin-left: 15px;
-
+  
+    
       h3,
       p {
         margin: 0;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     .price {
@@ -127,8 +143,8 @@ header {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 0;
-    width: 5%;
+    right: -70px;
+    width: 70px;
     height: 75px;
     background-color: #99e2d0;
     border-top-right-radius: 1rem;
@@ -216,6 +232,24 @@ header {
     100% {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  @keyframes slide {
+    100%{
+      right: 0;
+    }
+  }
+
+  @keyframes shift {
+    100%{
+      transform: translateX(-70px);
+    }
+  }
+
+  @keyframes test {
+    100%{
+      width: 200px;
     }
   }
 

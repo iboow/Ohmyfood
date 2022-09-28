@@ -95,6 +95,7 @@ header {
   height: 75px;
   border-radius: 1rem;
   background-color: white;
+  overflow: hidden;
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -102,12 +103,24 @@ header {
 .dishes .plate:hover > .selection,
 .dessert .plate:hover > .selection {
   opacity: 1;
+  animation: slide 1.2s forwards;
+}
+.starter .plate:hover > .price,
+.dishes .plate:hover > .price,
+.dessert .plate:hover > .price {
+  animation: shift 1.2s forwards;
+}
+.starter .plate:hover > .food,
+.dishes .plate:hover > .food,
+.dessert .plate:hover > .food {
+  animation: test 1s forwards;
 }
 .starter .plate .food,
 .dishes .plate .food,
 .dessert .plate .food {
   display: flex;
   flex-direction: column;
+  width: 280px;
   gap: 10px;
   margin-left: 15px;
 }
@@ -118,6 +131,9 @@ header {
 .dessert .plate .food h3,
 .dessert .plate .food p {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .starter .plate .price,
 .dishes .plate .price,
@@ -133,8 +149,8 @@ header {
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 0;
-  width: 5%;
+  right: -70px;
+  width: 70px;
   height: 75px;
   background-color: #99e2d0;
   border-top-right-radius: 1rem;
@@ -217,6 +233,21 @@ header {
   100% {
     opacity: 1;
     transform: none;
+  }
+}
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+@keyframes shift {
+  100% {
+    transform: translateX(-70px);
+  }
+}
+@keyframes test {
+  100% {
+    width: 200px;
   }
 }
 footer {
