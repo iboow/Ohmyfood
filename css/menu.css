@@ -105,6 +105,11 @@ header {
   opacity: 1;
   animation: slide 1.2s forwards;
 }
+.starter .plate:hover > .selection .fa-check,
+.dishes .plate:hover > .selection .fa-check,
+.dessert .plate:hover > .selection .fa-check {
+  animation: spin 1.2s forwards;
+}
 .starter .plate:hover > .price,
 .dishes .plate:hover > .price,
 .dessert .plate:hover > .price {
@@ -113,7 +118,7 @@ header {
 .starter .plate:hover > .food,
 .dishes .plate:hover > .food,
 .dessert .plate:hover > .food {
-  animation: test 1s forwards;
+  animation: short-text 1s forwards;
 }
 .starter .plate .food,
 .dishes .plate .food,
@@ -155,11 +160,11 @@ header {
   background-color: #99e2d0;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  opacity: 0;
+  opacity: 1;
 }
-.starter .selection .fa-check,
-.dishes .selection .fa-check,
-.dessert .selection .fa-check {
+.starter .fa-check,
+.dishes .fa-check,
+.dessert .fa-check {
   font-size: 20px;
   background-color: white;
   border-radius: 50%;
@@ -179,6 +184,9 @@ header {
 }
 .starter .plate:nth-child(4) {
   animation: apparition 1s 0.8s ease-out forwards;
+}
+.starter .plate:nth-child(5) {
+  animation: apparition 1s 1s ease-out forwards;
 }
 
 .dishes .plate {
@@ -242,12 +250,17 @@ header {
 }
 @keyframes shift {
   100% {
-    transform: translateX(-70px);
+    transform: translateX(-60px);
   }
 }
-@keyframes test {
+@keyframes short-text {
   100% {
     width: 200px;
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
   }
 }
 footer {

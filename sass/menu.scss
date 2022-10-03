@@ -101,18 +101,21 @@ header {
     margin-top: 5px;
     margin-bottom: 10px;
 
-    &:hover>.selection{
+    &:hover > .selection {
       opacity: 1;
       animation: slide 1.2s forwards;
     }
 
-    &:hover>.price{
+    &:hover > .selection .fa-check {
+      animation: spin 1.2s forwards;
+    }
+
+    &:hover > .price {
       animation: shift 1.2s forwards;
     }
 
-    &:hover>.food{
-
-      animation: test 1s forwards;
+    &:hover > .food {
+      animation: short-text 1s forwards;
     }
 
     .food {
@@ -121,12 +124,11 @@ header {
       width: 280px;
       gap: 10px;
       margin-left: 15px;
-  
-    
+
       h3,
       p {
         margin: 0;
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -149,143 +151,149 @@ header {
     background-color: #99e2d0;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    opacity: 0;
+    opacity: 1;
+  }
 
-    .fa-check {
-      font-size: 20px;
-      background-color: white;
-      border-radius: 50%;
-      color: #99e2d0;
-      padding: 3px;
+  .fa-check {
+    font-size: 20px;
+    background-color: white;
+    border-radius: 50%;
+    color: #99e2d0;
+    padding: 3px;
+  }
+}
+
+.starter .plate {
+  opacity: 0;
+  transform: translateY(30px);
+
+  &:nth-child(2) {
+    animation: apparition 1s 0.4s ease-out forwards;
+  }
+  &:nth-child(3) {
+    animation: apparition 1s 0.6s ease-out forwards;
+  }
+  &:nth-child(4) {
+    animation: apparition 1s 0.8s ease-out forwards;
+  }
+  &:nth-child(5) {
+    animation: apparition 1s 1s ease-out forwards;
+  }
+}
+
+.dishes .plate {
+  opacity: 0;
+  transform: translateY(30px);
+
+  &:nth-child(2) {
+    animation: apparition 1s 1.2s ease-out forwards;
+  }
+  &:nth-child(3) {
+    animation: apparition 1s 1.4s ease-out forwards;
+  }
+  &:nth-child(4) {
+    animation: apparition 1s 1.6s ease-out forwards;
+  }
+}
+
+.dessert .plate {
+  opacity: 0;
+  transform: translateY(30px);
+
+  &:nth-child(2) {
+    animation: apparition 1s 2s ease-out forwards;
+  }
+  &:nth-child(3) {
+    animation: apparition 1s 2.2s ease-out forwards;
+  }
+  &:nth-child(4) {
+    animation: apparition 1s 2.4s ease-out forwards;
+  }
+}
+
+.name {
+  height: 70px;
+
+  p {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      height: 1px;
+      width: 100%;
+      border-bottom: 4px solid #99e2d0;
+      margin: 0;
     }
   }
 }
 
-  .starter .plate {
-    opacity: 0;
-    transform: translateY(30px);
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 
-    &:nth-child(2) {
-      animation: apparition 1s 0.4s ease-out forwards;
-    }
-    &:nth-child(3) {
-      animation: apparition 1s 0.6s ease-out forwards;
-    }
-    &:nth-child(4) {
-      animation: apparition 1s 0.8s ease-out forwards;
-    }
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes shift {
+  100% {
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes short-text {
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: white;
+  background-color: #3d3939;
+
+  h3 {
+    font-family: "Shrikhand", sans-serif;
+    margin: 0;
   }
 
-  .dishes .plate {
-    opacity: 0;
-    transform: translateY(30px);
-
-    &:nth-child(2) {
-      animation: apparition 1s 1.2s ease-out forwards;
-    }
-    &:nth-child(3) {
-      animation: apparition 1s 1.4s ease-out forwards;
-    }
-    &:nth-child(4) {
-      animation: apparition 1s 1.6s ease-out forwards;
-    }
-  }
-
-  .dessert .plate {
-    opacity: 0;
-    transform: translateY(30px);
-
-    &:nth-child(2) {
-      animation: apparition 1s 2s ease-out forwards;
-    }
-    &:nth-child(3) {
-      animation: apparition 1s 2.2s ease-out forwards;
-    }
-    &:nth-child(4) {
-      animation: apparition 1s 2.4s ease-out forwards;
-    }
-  }
-
-  .name {
-    height: 70px;
-
-    p {
-      font-size: 18px;
-      width: 50px;
-      height: 50px;
-      position: relative;
-
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 15px;
-        height: 1px;
-        width: 100%;
-        border-bottom: 4px solid #99e2d0;
-        margin: 0;
-      }
-    }
-  }
-
-  @keyframes apparition {
-    100% {
-      opacity: 1;
-      transform: none;
-    }
-  }
-
-  @keyframes slide {
-    100%{
-      right: 0;
-    }
-  }
-
-  @keyframes shift {
-    100%{
-      transform: translateX(-70px);
-    }
-  }
-
-  @keyframes test {
-    100%{
-      width: 200px;
-    }
-  }
-
- 
-
-  footer {
+  ul {
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    color: white;
-    background-color: #3d3939;
+    gap: 10px;
+    font-family: "roboto", sans-serif;
+    padding: 0;
 
-    h3 {
-      font-family: "Shrikhand", sans-serif;
-      margin: 0;
+    li {
+      display: flex;
+      height: 25px;
+      gap: 5px;
     }
 
-    ul {
+    .icon {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      color: white;
       gap: 10px;
-      font-family: "roboto", sans-serif;
-      padding: 0;
-
-      li {
-        display: flex;
-        height: 25px;
-        gap: 5px;
-      }
-
-      .icon {
-        display: flex;
-        align-items: center;
-        color: white;
-        gap: 10px;
-      }
     }
   }
-
+}

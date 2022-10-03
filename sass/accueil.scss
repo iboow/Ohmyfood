@@ -68,7 +68,7 @@ body {
   font-weight: bold;
   padding: 0 25px;
 
-  &:hover{
+  &:hover {
     filter: brightness(1.1);
     box-shadow: rgb(175, 165, 165) 0px 6px 10px;
   }
@@ -121,7 +121,7 @@ body {
   justify-content: center;
   margin: 20px;
 
-  a{
+  a {
     gap: 15px;
   }
 }
@@ -188,22 +188,20 @@ body {
 
 .restaurant {
   padding: 25px 15px;
+  height: 900px;
   margin-top: 50px;
-  margin-bottom: 50px;
   background-color: #f2f4f4;
 
-
-  h2{
+  h2 {
     margin-top: 30px;
     margin-bottom: 30px;
   }
 
-  h3,p{
-
+  h3,
+  p {
     margin: 0;
   }
 }
-
 
 .thumbnail-restaurant {
   min-width: 200px;
@@ -215,7 +213,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
 
-  a{
+  a {
     text-decoration: none;
     color: black;
   }
@@ -223,16 +221,14 @@ body {
   .picture {
     width: 100%;
     height: 70%;
-  
-     img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-     }
+    }
+  }
 }
-}
-
-
 
 .restaurant-group {
   display: flex;
@@ -241,12 +237,9 @@ body {
   align-items: center;
   row-gap: 30px;
   column-gap: 35px;
- 
 }
 
-
-.new{
-
+.new {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,48 +250,46 @@ body {
   width: 90px;
   height: 35px;
   z-index: 2;
-  color: #319C67;
+  color: #319c67;
   border-radius: 5px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   text-align: center;
- 
-  p{
+
+  p {
     position: absolute;
     vertical-align: middle;
   }
 }
 
-.content{
+.content {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   padding-top: 3px;
   margin: 0 auto;
   width: 88%;
   height: 30%;
 
-  .text{
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
+  .text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
 }
 
-}
-
-.heart{
+.heart {
   display: flex;
   font-size: 28px;
 
-  .fa-regular{
+  .fa-regular {
     position: relative;
   }
 
-  .fa-solid{
+  .fa-solid {
     position: absolute;
     opacity: 0;
 
-    &:hover{
-
+    &:hover {
       background: linear-gradient(#ff79da, #9356dc);
       background-clip: text;
       -webkit-background-clip: text;
@@ -308,62 +299,125 @@ body {
   }
 }
 
-
-
-@keyframes fill{
-
-  0%{
+@keyframes fill {
+  0% {
     opacity: 0;
   }
 
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-
-
-footer{
-
+footer {
   display: flex;
   flex-direction: column;
-  padding:15px;
+  padding: 15px;
   color: white;
-  background-color: #3D3939;
+  background-color: #3d3939;
 
-  h3{
-    font-family: 'Shrikhand';
+  h3 {
+    font-family: "Shrikhand";
     margin: 0;
   }
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-family: 'roboto',sans-serif;
+    font-family: "roboto", sans-serif;
     padding: 0;
 
-    li{
+    li {
       display: flex;
       height: 25px;
       gap: 5px;
     }
 
-     .icon{
+    .icon {
       display: flex;
       align-items: center;
       color: white;
       gap: 10px;
-     }
+    }
   }
-
 }
 
+@media screen and (min-width: 768px) {
+  .topic {
+    height: 150px;
+  }
+
+  .functionning {
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px -1px #e0e0e0;
+    padding: 20px;
+    margin: 30px;
+  
+    h2 {
+
+      font-size: 30px;
+      font-family:"Shrikhand",sans-serif ;
+      margin: auto;
+      margin-bottom: 40px;
+      background-image: linear-gradient(to right, #ff79da, #9356dc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: decimal;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+  }
 
 
-   
+  .restaurant{
 
- 
+     border: 1px solid transparent;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px -1px #e0e0e0;
+  
+   h2{
 
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family:"Shrikhand",sans-serif ;
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, #ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
+  .restaurant-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 50px;
+    
+  }
 
+  .thumbnail-restaurant {
+    min-width: 200px;
+    min-height: 210px;
+    width: 40%;
+    height: 300px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #d7d7d7;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+}
+}
