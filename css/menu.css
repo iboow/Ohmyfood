@@ -2,6 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
+  background-color: #f2f4f4;
 }
 
 header {
@@ -23,12 +24,13 @@ header {
   left: 20px;
   background-color: white;
   border: none;
-  font-size: 20px;
+  font-size: 25px;
+  color: #9356dc;
 }
 
 .background-picture {
   width: 100%;
-  height: 250px;
+  height: 300px;
 }
 .background-picture img {
   width: 100%;
@@ -53,8 +55,24 @@ header {
   font-size: 25px;
   font-family: "Shrikhand", sans-serif;
 }
-.title .fa-heart {
+
+.heart {
+  display: flex;
   font-size: 30px;
+}
+.heart .fa-regular {
+  position: relative;
+}
+.heart .fa-solid {
+  position: absolute;
+  opacity: 0;
+}
+.heart .fa-solid:hover {
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: fill 2.5s forwards;
 }
 
 .order {
@@ -118,14 +136,14 @@ header {
 .starter .plate:hover > .food,
 .dishes .plate:hover > .food,
 .dessert .plate:hover > .food {
-  animation: short-text 1s forwards;
+  animation: short-text 0.8s forwards;
 }
 .starter .plate .food,
 .dishes .plate .food,
 .dessert .plate .food {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 100%;
   gap: 10px;
   margin-left: 15px;
 }
@@ -139,6 +157,7 @@ header {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 100%;
 }
 .starter .plate .price,
 .dishes .plate .price,
@@ -146,6 +165,11 @@ header {
   align-self: end;
   margin-right: 15px;
   font-weight: bold;
+}
+.starter .plate .price p,
+.dishes .plate .price p,
+.dessert .plate .price p {
+  margin-bottom: 13px;
 }
 .starter .selection,
 .dishes .selection,
@@ -255,12 +279,20 @@ header {
 }
 @keyframes short-text {
   100% {
-    width: 200px;
+    width: 60%;
   }
 }
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 footer {
@@ -286,11 +318,72 @@ footer ul li {
   height: 25px;
   gap: 5px;
 }
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
 footer ul .icon {
   display: flex;
   align-items: center;
   color: white;
   gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-color: white;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .menu {
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 10px -1px #e0e0e0;
+  }
+  .menu .name p {
+    width: 100%;
+  }
+  .menu .starter-dishes-dessert {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  .menu .starter-dishes-dessert .starter, .menu .starter-dishes-dessert .dishes, .menu .starter-dishes-dessert .dessert {
+    align-items: center;
+    width: 30%;
+    flex: 1 1 350px;
+  }
+  .menu .plate {
+    border: 1px solid #99e2d0;
+    width: 100%;
+    max-width: 370px;
+  }
+  footer {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    height: 100px;
+    font-size: 18px;
+    margin-top: 80px;
+  }
+  footer ul {
+    flex-direction: row;
+    gap: 40px;
+  }
+  footer ul li {
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */

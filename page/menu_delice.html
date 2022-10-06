@@ -24,9 +24,9 @@
 
   <body>
     <header>
-      <button class="btn-back" onclick="window.location.href = '../index.html'">
+      <a class="btn-back" href="../index.html">
         <i class="fa-solid fa-arrow-left-long"></i>
-      </button>
+      </a>
 
       <div class="logo-picture">
         <img src="../images/logo/ohmyfood.png" alt="logo" />
@@ -43,9 +43,13 @@
     <section class="menu">
       <div class="title">
         <h1>Le délice des sens</h1>
+        <div class="heart">
         <i class="fa-regular fa-heart"></i>
+        <i class="fa-solid fa-heart"></i>
+        </div>
       </div>
 
+      <div class="starter-dishes-dessert">
       <div class="starter">
         <div class="name">
           <p>ENTRÉES</p>
@@ -156,7 +160,7 @@
 
         <div class="plate">
           <div class="food">
-            <h3>Crème brulée   </h3>
+            <h3>Crème brulée</h3>
             <p>Revisitée</p>
           </div>
           <div class="price">
@@ -180,6 +184,7 @@
           </div>
         </div>
       </div>
+      </div>
 
       <div class="order">
         <button class="btn-order" type="button">Commander</button>
@@ -198,7 +203,9 @@
           <p>Devenir partenaire</p>
         </li>
         <li>Mentions légales</li>
-        <li>Contact</li>
+        <li>
+          <a href="#"> Contact </a>
+        </li>
       </ul>
     </footer>
   </body>

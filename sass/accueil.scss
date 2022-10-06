@@ -188,7 +188,6 @@ body {
 
 .restaurant {
   padding: 25px 15px;
-  height: 900px;
   margin-top: 50px;
   background-color: #f2f4f4;
 
@@ -219,8 +218,31 @@ body {
   }
 
   .picture {
+    position: relative;
     width: 100%;
     height: 70%;
+
+    .new {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      margin-top: 10px;
+      margin-right: 25px;
+      width: 90px;
+      height: 35px;
+      z-index: 2;
+      color: #319c67;
+      border-radius: 5px;
+      background-color: #99e2d0;
+      text-align: center;
+
+      p {
+        position: absolute;
+        vertical-align: middle;
+      }
+    }
 
     img {
       width: 100%;
@@ -237,28 +259,6 @@ body {
   align-items: center;
   row-gap: 30px;
   column-gap: 35px;
-}
-
-.new {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  margin-top: 10px;
-  margin-right: 25px;
-  width: 90px;
-  height: 35px;
-  z-index: 2;
-  color: #319c67;
-  border-radius: 5px;
-  background-color: #99e2d0;
-  text-align: center;
-
-  p {
-    position: absolute;
-    vertical-align: middle;
-  }
 }
 
 .content {
@@ -316,6 +316,8 @@ footer {
   color: white;
   background-color: #3d3939;
 
+ 
+
   h3 {
     font-family: "Shrikhand";
     margin: 0;
@@ -332,6 +334,11 @@ footer {
       display: flex;
       height: 25px;
       gap: 5px;
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
     }
 
     .icon {
@@ -343,9 +350,22 @@ footer {
   }
 }
 
+
 @media screen and (min-width: 768px) {
   .topic {
     height: 150px;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Shrikhand", sans-serif;
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, #ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   .functionning {
@@ -354,18 +374,7 @@ footer {
     box-shadow: 1px 1px 10px -1px #e0e0e0;
     padding: 20px;
     margin: 30px;
-  
-    h2 {
-
-      font-size: 30px;
-      font-family:"Shrikhand",sans-serif ;
-      margin: auto;
-      margin-bottom: 40px;
-      background-image: linear-gradient(to right, #ff79da, #9356dc);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+    background-color: #fcfcfc;
 
     ul {
       display: flex;
@@ -378,46 +387,60 @@ footer {
     }
   }
 
-
-  .restaurant{
-
-     border: 1px solid transparent;
+  .restaurant {
+    border: 1px solid transparent;
     border-radius: 2rem;
     box-shadow: 1px 1px 10px -1px #e0e0e0;
-  
-   h2{
+    margin: 40px;
+    background-color: #fcfcfc;
 
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-family:"Shrikhand",sans-serif ;
-    margin-bottom: 40px;
-    background-image: linear-gradient(to right, #ff79da, #9356dc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    .restaurant-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      row-gap: 50px;
+      column-gap: 50px;
+      margin-top: 60px;
+    }
+
+    .thumbnail-restaurant {
+      min-width: 200px;
+      min-height: 210px;
+      width: 35%;
+      height: 300px;
+      background-color: white;
+      box-shadow: 2px 2px 5px #d7d7d7;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.8s;
+      
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 6px 6px 15px #d7d7d7;
+      }
+    }
   }
 
-  .restaurant-group {
-    display: flex;
-    flex-direction: row;
+  
+
+  footer {
     align-items: center;
     justify-content: center;
-    row-gap: 50px;
-    column-gap: 50px;
-    
+    flex-direction: row;
+    gap: 40px;
+    height: 100px;
+    font-size: 18px;
+    margin-top: 80px;
+
+    ul {
+      flex-direction: row;
+      gap: 40px;
+
+      li {
+        align-items: center;
+      }
+    }
   }
-
-  .thumbnail-restaurant {
-    min-width: 200px;
-    min-height: 210px;
-    width: 40%;
-    height: 300px;
-    background-color: white;
-    box-shadow: 2px 2px 5px #d7d7d7;
-    border-radius: 20px;
-    overflow: hidden;
-
-}
-}
 }
