@@ -110,7 +110,6 @@ header {
 .dessert {
   display: flex;
   flex-direction: column;
-  
 
   .plate {
     display: flex;
@@ -123,24 +122,26 @@ header {
     overflow: hidden;
     margin-top: 5px;
     margin-bottom: 10px;
+   
     
-    
-
     &:hover > .selection {
       opacity: 1;
-      animation: slide 1.2s forwards;
+      transform: translateX(-70px);
     }
 
     &:hover > .selection .fa-check {
-      animation: spin 1.2s forwards;
+      
+     transform: rotate(360deg);
     }
 
     &:hover > .price {
-      animation: shift 1.2s forwards;
+      transform: translateX(-60px);
+      
     }
 
     &:hover > .food {
-      animation: short-text 0.8s forwards;
+      transition: width 1s;
+      width: 60%;
     }
 
     .food {
@@ -149,6 +150,7 @@ header {
       width: 100%;
       gap: 10px;
       margin-left: 15px;
+      transition: all 1.2s;
 
       h3,
       p {
@@ -163,6 +165,7 @@ header {
       align-self: end;
       margin-right: 15px;
       font-weight: bold;
+      transition: all 1.2s;
 
       p {
         margin-bottom: 13px;
@@ -181,7 +184,7 @@ header {
     background-color: #99e2d0;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    opacity: 1;
+    transition: all 1.2s;
   }
 
   .fa-check {
@@ -190,6 +193,7 @@ header {
     border-radius: 50%;
     color: #99e2d0;
     padding: 3px;
+    transition: all 1.2s;
   }
 }
 
@@ -267,30 +271,6 @@ header {
   100% {
     opacity: 1;
     transform: none;
-  }
-}
-
-@keyframes slide {
-  100% {
-    right: 0;
-  }
-}
-
-@keyframes shift {
-  100% {
-    transform: translateX(-60px);
-  }
-}
-
-@keyframes short-text {
-  100% {
-    width: 60%;
-  }
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
   }
 }
 

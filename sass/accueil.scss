@@ -85,18 +85,18 @@ body {
   height: 100vh;
   animation: disappear 0s forwards;
   animation-delay: 3s;
-}
 
-.loading-spinner {
-  border-bottom: 2px solid #9356dc;
-  border-left: 2px solid #9356dc;
-  border-top: 2px solid #ff79da;
-  border-right: 2px solid #ff79da;
-  border-radius: 50%;
-  background: linear-gradient(#ff79da, #9356dc);
-  width: 100px;
-  height: 100px;
-  animation: spin 3s linear infinite;
+  .loading-spinner {
+    border-bottom: 2px solid #9356dc;
+    border-left: 2px solid #9356dc;
+    border-top: 2px solid #ff79da;
+    border-right: 2px solid #ff79da;
+    border-radius: 50%;
+    background: linear-gradient(#ff79da, #9356dc);
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear infinite;
+  }
 }
 
 @keyframes spin {
@@ -121,20 +121,33 @@ body {
   justify-content: center;
   margin: 20px;
 
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: decimal;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+    li {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+      gap: 12px;
+    }
+  }
+
+  .fa-solid {
+    font-size: 20px;
+    color: gray;
+  }
+
   a {
     gap: 15px;
   }
-}
-
-.functionning ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: decimal;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-  color: black;
 }
 
 .hovering {
@@ -158,19 +171,6 @@ body {
       color: #9356dc;
     }
   }
-}
-
-.functionning li {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  width: 100%;
-  gap: 12px;
-}
-
-.functionning .fa-solid {
-  font-size: 20px;
-  color: gray;
 }
 
 .number {
@@ -200,65 +200,65 @@ body {
   p {
     margin: 0;
   }
-}
 
-.thumbnail-restaurant {
-  min-width: 200px;
-  min-height: 210px;
-  width: 100%;
-  height: 190px;
-  background-color: white;
-  box-shadow: 2px 2px 5px #d7d7d7;
-  border-radius: 20px;
-  overflow: hidden;
-
-  a {
-    text-decoration: none;
-    color: black;
+  .restaurant-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 35px;
   }
 
-  .picture {
-    position: relative;
+  .thumbnail-restaurant {
+    min-width: 200px;
+    min-height: 210px;
     width: 100%;
-    height: 70%;
+    height: 190px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #d7d7d7;
+    border-radius: 20px;
+    overflow: hidden;
 
-    .new {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      right: 0;
-      margin-top: 10px;
-      margin-right: 25px;
-      width: 90px;
-      height: 35px;
-      z-index: 2;
-      color: #319c67;
-      border-radius: 5px;
-      background-color: #99e2d0;
-      text-align: center;
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
-      p {
+    .picture {
+      position: relative;
+      width: 100%;
+      height: 70%;
+
+      .new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        vertical-align: middle;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 25px;
+        width: 90px;
+        height: 35px;
+        z-index: 2;
+        color: #319c67;
+        border-radius: 5px;
+        background-color: #99e2d0;
+        text-align: center;
+
+        p {
+          position: absolute;
+          vertical-align: middle;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
-}
-
-.restaurant-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  row-gap: 30px;
-  column-gap: 35px;
 }
 
 .content {
@@ -316,8 +316,6 @@ footer {
   color: white;
   background-color: #3d3939;
 
- 
-
   h3 {
     font-family: "Shrikhand";
     margin: 0;
@@ -335,7 +333,7 @@ footer {
       height: 25px;
       gap: 5px;
 
-      a{
+      a {
         text-decoration: none;
         color: white;
       }
@@ -349,7 +347,6 @@ footer {
     }
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .topic {
@@ -414,7 +411,6 @@ footer {
       border-radius: 20px;
       overflow: hidden;
       transition: all 0.8s;
-      
 
       &:hover {
         transform: scale(1.05);
@@ -422,8 +418,6 @@ footer {
       }
     }
   }
-
-  
 
   footer {
     align-items: center;
