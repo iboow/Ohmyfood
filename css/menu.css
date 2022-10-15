@@ -120,7 +120,6 @@ header {
 .starter .plate:hover > .selection,
 .dishes .plate:hover > .selection,
 .dessert .plate:hover > .selection {
-  opacity: 1;
   transform: translateX(-70px);
 }
 .starter .plate:hover > .selection .fa-check,

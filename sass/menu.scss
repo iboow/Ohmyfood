@@ -57,7 +57,6 @@ header {
   }
 }
 
-
 .heart {
   display: flex;
   font-size: 30px;
@@ -79,7 +78,6 @@ header {
     }
   }
 }
-
 
 .order {
   display: flex;
@@ -122,21 +120,17 @@ header {
     overflow: hidden;
     margin-top: 5px;
     margin-bottom: 10px;
-   
-    
+
     &:hover > .selection {
-      opacity: 1;
       transform: translateX(-70px);
     }
 
     &:hover > .selection .fa-check {
-      
-     transform: rotate(360deg);
+      transform: rotate(360deg);
     }
 
     &:hover > .price {
       transform: translateX(-60px);
-      
     }
 
     &:hover > .food {
@@ -308,7 +302,7 @@ footer {
       height: 25px;
       gap: 5px;
 
-      a{
+      a {
         text-decoration: none;
         color: white;
       }
@@ -324,10 +318,9 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-
-header{
-  background-color: white;
-}
+  header {
+    background-color: white;
+  }
 
   .title {
     display: flex;
@@ -347,7 +340,6 @@ header{
     }
 
     .starter-dishes-dessert {
-
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -357,24 +349,21 @@ header{
       margin-bottom: 30px;
       padding: 20px;
 
-      .starter,.dishes,.dessert{
+      .starter,
+      .dishes,
+      .dessert {
         align-items: center;
         width: 30%;
         flex: 1 1 350px;
       }
     }
 
-    .plate{
-
+    .plate {
       border: 1px solid #99e2d0;
       width: 100%;
       max-width: 370px;
-
-
     }
   }
-
- 
 
   footer {
     align-items: center;
